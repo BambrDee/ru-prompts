@@ -176,6 +176,11 @@ class PromptFormat(BasePromptFormat):
         """
 
         self.key = None
+        self.formattable = None
+        self._prompt_token_ids = []
+        self._init_tokens = {}
+        self.prompt_token = PROMPT_TOKEN
+        
         self.template = template
         self._is_initialized = False
 
@@ -184,12 +189,7 @@ class PromptFormat(BasePromptFormat):
             self._is_initialized = True
 
         if tokenizer is not None:
-            self.initialize(tokenizer)
-
-        self.formattable = None
-        self._prompt_token_ids = []
-        self._init_tokens = {}
-        self.prompt_token = PROMPT_TOKEN
+            self.initialize(tokenizer)       
 
     def format(
         self, item: Dict[str, Any], return_ranges: bool = False
