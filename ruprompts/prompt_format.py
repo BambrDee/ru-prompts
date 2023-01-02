@@ -175,6 +175,7 @@ class PromptFormat(BasePromptFormat):
             tokenizer (Optional[PreTrainedTokenizerBase]): Tokenizer to process the `<P>Text</P>` patterns.
         """
 
+        self.key = None
         self.template = template
         self._is_initialized = False
 
@@ -189,7 +190,6 @@ class PromptFormat(BasePromptFormat):
         self._prompt_token_ids = []
         self._init_tokens = {}
         self.prompt_token = PROMPT_TOKEN
-        self.key = None
 
     def format(
         self, item: Dict[str, Any], return_ranges: bool = False
