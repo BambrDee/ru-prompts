@@ -1,3 +1,9 @@
-import setuptools
+#!/usr/bin/env python
+from distutils.core import setup
 
-setuptools.setup()
+setup(name='ruprompts',
+      version='0.1.0',
+      description='ruprompts',
+      author='',
+      author_email='',
+      url='')
