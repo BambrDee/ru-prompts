@@ -6,4 +6,6 @@ setup(name='ruprompts',
       description='ruprompts',
       author='',
       author_email='',
-      url='')
+      url='',
+	  packages=['ruprompts'],
+   	  package_data={})
